@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --1:white;
+    --2:black;
+    --3:green;
+    --4:rgb(154, 247, 154);
+    --5:rgb(56, 56, 56);
+    --6:rgb(76, 255, 145);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--5);
+}
+
+.watchD{
+    padding: .4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    font-family: monospace;
+    font-size: 1.8rem;
+    color: var(--6);
+    margin-top: 10rem;
+    border: .2rem solid var(--3);
+    box-shadow: inset 0rem 0rem .1rem .2rem var(--3);
+}
+
+.watch{
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./../img/watch.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1.5rem solid var(--3);
+    border-radius: 50%;
+    box-shadow: inset 0rem 0rem 2rem .2rem var(--3);
+}
+
+.watch::before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--3);
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.hour{
+    width: 10rem;
+    height: 10rem;
+}
+
+.hour::before{
+    content: '';
+    position: absolute;
+    width: .5rem;
+    height: 4rem;
+    background-color: var(--4);
+    z-index: 10;
+    border-radius: 30vh;
+}
+
+.minute{
+    width: 13rem;
+    height: 13rem;
+}
+
+.minute:before{
+    content: '';
+    position: absolute;
+    width: .3rem;
+    height: 7rem;
+    background-color: var(--4);
+    z-index: 11;
+    border-radius: 30vh;
+}
+
+.second{
+    width: 18rem;
+    height: 18rem;
+}
+
+.second:before{
+    content: '';
+    position: absolute;
+    width: .1rem;
+    height: 8rem;
+    background-color: var(--4);
+    z-index: 12;
+    border-radius: 30vh;
+}
+
+.hour, .minute, .second{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
